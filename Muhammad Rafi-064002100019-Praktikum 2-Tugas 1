@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 27 13:10:55 2021
+
+@author: Rafi
+"""
+
+import math
+
+x = float(input("Masukkan bilangan 1 = "))
+y = float(input("Masukkan bilangan 2 = "))
+
+print("\n")
+print("Bilangan 1 =", x)
+print("Bilangan 2 = ", y)
+
+print("\n")
+print("Jawaban :")
+print("Pertambahan kedua bilangan = ", x + y)
+print("Pengurangan kedua bilangan = ",abs( x - y))
+print("Perkalian kedua bilangan = ", x * y)
+print("Pembagian kedua bilangan =", x / y)
+print("Jumlah sisa pembagian 1 dan 2 =", x % y)
+print("Hasil dari log bilangan 1 =", math.log10(x))
+print("Hasil dari log bilangan 2 =", math.log10(y))
+print("Bilangan 1 pangkat bilangan 2 =", x**y)
