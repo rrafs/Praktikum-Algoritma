@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct  4 15:08:59 2021
+
+@author: Rafi
+"""
+
+import math
+
+print("Mari menghitung jarak antara dua titik di permukaan bumi")
+("\n")
+lat1=float(input("Kordinat lattitude ke 1 = "))
+lat2=float(input("Kordinat Lattitude ke 2 = "))
+lon1=float(input("Kordinat Longtitude ke 1 = "))
+lon2=float(input("Kordinat Longtitude ke 2 = "))
+
+dlon=(lon2-lon1)
+dlat=(lat2-lat1)
+a=math.sin(math.radians(dlon/2))**2+math.cos(math.radians(lat1))+math.cos(math.radians(lat2))*math.sin(math.radians(dlat/2))**2
+b=2*math.asin(math.sqrt(a))
+r=6371.01*b
+print("Jarak antara dua titik", r , "Kilometer")
