@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct  4 13:25:50 2021
+
+@author: Rafi
+"""
+
+
+x = int(input("Masukkan sisi ke 1 = "))
+y = int(input("Masukkan sisi ke 2 = "))
+z = int(input("Masukkan sisi ke 3 = "))
+
+if x == y == z :
+    print("Merupakkan segitiga sama sisi")
+elif x==y>z or x==z>y or y==z>x :
+    print("Merupakkan segitiga sama kaki")
+elif x*x + y*y == z*z or x*x + z*z == y*y or y*y + z*z == x*x :
+    print('Merupakkan segitiga siku-siku')
+elif x*x - y*y == z*z or x*x - z*z == y*y or y*y + z*z == x*x :
+    print("Merupakkan segitiga siku-siku")
+elif (x+y <= z) or (x+z <= y) or (y+z <= x) or (x==y <=z):
+    print ("Bukan segitiga")
+else :
+    print("Merupakkan segitiga sembarang")
