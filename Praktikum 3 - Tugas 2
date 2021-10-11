@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 11 13:40:17 2021
+
+@author: Rafi
+"""
+
+import cmath as cm
+
+repeat ="ya"
+while repeat == "Ya" or "ya" :
+
+    a = int(input("masukan angka ke satu : "))
+    b = int(input("masukan angka ke dua : "))
+    c = int(input("masukan angka ke tiga : "))
+
+    if a == 0 :
+        print("angka ke 1 tidak boleh nol")
+
+    else:
+        O = (b**2) - (4*a*c)
+        if O > 0 :
+            x1 = (-b +cm.sqrt(O))/(2*a)
+            x2 = (-b +cm.sqrt(O))/(2*a)
+            print("merupakan jenis akar yang berbeda")
+            print("jadi persamaan kuadratnya adalah",x1,"dan",x2,"determinannya adalah",O)
+            
+
+        elif O == 0 :
+             x1 = (-b ) / (2*a)
+             x2 = (-b ) / (2*a)
+             print("merupakan jenis akar yang kembar")
+             print("jadi persamaan kuadratnya adalah",x1,"dan",x2,"determinannya adalah", O)
+
+        elif O < 0 :
+             x1 = (-b +cm.sqrt(O)) / (2*a)
+             x2 = (-b +cm.sqrt(O)) / (2*a)
+             print("merupakan jenis akar imaginer")
+             print("jadi persamaan kuadratnya adalah",x1,"dan",x2)
+repeat = (input("Ulang?"))Pr
