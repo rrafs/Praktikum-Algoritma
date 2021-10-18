@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct 18 15:08:05 2021
+
+@author: Rafi
+"""
+
+print("Menghitung Jumlah Hari dalam Bulan ")
+ulangi = True
+while ulangi == True:
+    print("Stop untuk menghentikan program")
+    bulan = int(input("masukan bulan (1-12): "))
+    if bulan == "Stop" :
+        ulangi = False
+        print("terima kasih!")
+    else:
+        if bulan == 1 or bulan == 2 or bulan == 3 or bulan == 4 or bulan == 5 or bulan == 6 or bulan == 7 or bulan == 8 or bulan == 9 or bulan == 10 or bulan == 11 or bulan == 12:
+            if bulan == 2:
+                tahun = int(input("masukan tahun : "))
+                if (tahun%4==0):
+                    print("ada 29 hari dalam sebulan")
+                else:
+                    print("ada 28 hari dalam sebulan")
+            else:
+                if bulan == 1 or bulan == 3 or bulan == 5 or bulan == 7 or bulan == 8 or bulan == 10 or bulan == 12:
+                    print("ada 31 hari dalam sebulan")
+                else:
+                    print("ada 30 hari dalam sebulan")
+        else:
+            print("* nilai yang dimasukan tidak valid :",bulan,"*")
