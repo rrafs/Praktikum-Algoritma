@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Oct 24 15:50:53 2021
+
+@author: rafi
+"""
+
+print("Selamat Datang di Kebun Binatang Pamulang")
+print("Harga tiket masuk disesuaikan dengan umur")
+
+while True:
+    umur = int(input('Umur berapa sekarang anda ?  '))
+    x = True
+    if umur >= 0 and umur <=2:
+        print('Untuk umur kurang dari dan sama dengan 2 , Tiket HTM Gratis ')
+        bayar = False
+    elif umur >= 3 and umur <= 12:
+        harga = 14 
+        print('HTM Kebun Binatang sebesar $',harga)
+    elif umur >=13 and umur < 65:
+        harga = 23
+        print('HTM Kebun Binatang sebesar $',harga)
+    else:
+        harga = 18
+        print('HTM Kebun Binatang sebesar $',harga)
+        
+    if x == True:
+        uang = int(input('Silahkan bayar sesuai HTM : $ '))
+        if uang == harga:
+            print('Terimakasih, Selamat menikmati kebun binatang')
+        elif uang < harga:
+            print('Maaf duit anda kurang untuk membayar tiket masuk')
+        elif uang > harga:
+            uang -= harga
+            print('Kembalian anda $',uang , "selamat menikmati kebun binatang")
