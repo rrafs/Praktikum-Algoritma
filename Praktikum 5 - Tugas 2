@@ -9,7 +9,7 @@ print("Selamat Datang di Kebun Binatang Pamulang")
 print("Harga tiket masuk disesuaikan dengan umur")
 
 while True:
-    umur = int(input('Umur berapa sekarang anda ?  '))
+    umur = int(input(' Umur berapa sekarang anda ?  '))
     x = True
     if umur >= 0 and umur <=2:
         print('Untuk umur kurang dari dan sama dengan 2 , Tiket HTM Gratis ')
