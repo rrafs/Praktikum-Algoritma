@@ -40,5 +40,6 @@ def nilai_siswa ():
             print(f"nilai ke-{nomor} = {a}")
     rata2 = skor / nomor
     return rata2
+    
 
 print("rata rata nilai adalah", nilai_siswa())
