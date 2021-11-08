@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov  5 23:51:00 2021
+
+@author: rafi
+"""
+
+print("Program menghitung hari dalam sebulan")
+
+def fungsi_tahun(tahun):
+        if(tahun%4==0):
+            print("ada 29 hari dalam sebulan")
+        else:
+            print("ada 28 hari dalam sebulan")
+
+
+def fungsi_bulan(bulan):
+        if bulan >= 1 and bulan <= 12:
+            if bulan == 2:
+                tahun = int(input("masukan tahun : "))
+                fungsi_tahun(tahun)
+            else:
+                if bulan in [1,3,5,7,8,10,12]:
+                    print("ada 31 hari dalam sebulan")
+                else:
+                    print("ada 30 hari dalam sebulan")
+        else:
+            print("salah masukan angka :", bulan)
+
+loop = True
+while loop == True:
+    print("ketik -1 untuk hentikan program")
+    bulan = int(input("masukan bulan (1-12) : "))
+    fungsi_bulan(bulan)
+    if bulan == -1:
+        loop = False
+        print("Terima Kasih sudah menggunakan program saya.")
