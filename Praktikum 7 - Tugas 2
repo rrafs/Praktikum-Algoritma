@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 14 21:31:15 2021
+
+@author: rafi
+"""
+
+def ON(Z):
+     OND = {1: "st", 2: "nd", 3: "rd"}
+     N, mod = divmod(Z, 10)
+     suffix = N % 10 != 1 and OND.get(mod) or "th"
+     print(f"{Z}, '{suffix}'")
+
+print("Program untuk mencari Ordinal Number")
+print("Input -1 Untuk menghentikan program")
+
+loop = True
+while loop == True:
+     Z = int(input("Input angka : "))
+     if Z == -1:
+         loop = False
+         break
+     else:
+         ON(Z)
