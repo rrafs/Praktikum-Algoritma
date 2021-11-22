@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 22 20:49:40 2021
+
+@author: rafi
+"""
+
+print("Kalkulator Sederhan")
+a = float(input("Masukan angka: "))
+b = int(input("pangkat?"))
+
+def proses(a,b):
+
+    if b >= 1 :
+        return a * proses (a, b - 1)
+
+    return a
+hasil = proses (a, b)
+
+print(f"hasil nya adalah = {hasil}")
