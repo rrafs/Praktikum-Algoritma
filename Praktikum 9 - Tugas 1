@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 24 22:14:45 2021
+
+@author: rafi
+"""
+
 def readWrite(biodata):
     biodata = biodata(nama, umur, alamat, email, dosenWali)
     fWrite = open("Biodata.txt", "w")
