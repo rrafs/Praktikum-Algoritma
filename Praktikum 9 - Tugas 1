@@ -1,0 +1,24 @@
+def readWrite(biodata):
+    biodata = biodata(nama, umur, alamat, email, dosenWali)
+    fWrite = open("Biodata.txt", "w")
+    fWrite.write(biodata)
+    fWrite.close()
+    fRead = open("Biodata.txt", "r")
+    print(f"\n\nBerikut Ini Data Kamu\n{fRead.read()}")
+
+def biodata(nama, umur, alamat, email, dosenWali):
+    biodata = str(f"""Nama : {nama}
+Umur : {umur}
+Alamat : {alamat}
+Email : {email}
+Dosen Wali : {dosenWali}""")
+    return biodata
+
+nama = str(input("Masukan Nama : "))
+umur = str(input("Masukan Umur : "))
+alamat = str(input("Masukan Alamat : "))
+email = str(input("Masukan Email : "))
+dosenWali = str(input("Masukan Dosen Wali : "))
+
+biodata(nama, umur, alamat, email, dosenWali)
+readWrite(biodata)
