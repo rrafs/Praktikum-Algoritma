@@ -1,0 +1,145 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov 29 22:20:21 2021
+
+@author: rafi
+"""
+
+def createfile():
+    skip()
+    try:
+        subject = str(input(namesubject))
+    except:
+        input(error)
+        return
+    process = open(f'{subject}.txt','w')
+    num = 0
+    input(new_info)
+    start(process,num)
+    process.close()
+    
+def openthefile():
+    skip()
+    try:
+        subject = str(input(open_namesubject))
+    except:
+        input(error)
+        return
+    process = open(f'{subject}.txt','r+')
+    text = [str(x) for x in process]
+    num = 0
+    input(new_info)
+    print('\n\n\n')
+    for i in text:
+        num += 1
+        print(f'     {num}:> {i}')
+    start(process,num)
+    process.close
+
+def readonly():
+    skip()
+    subject = str(input(read_askname))
+    try:
+        process = open(f'{subject}.txt','r+')
+    except:
+        input(error)
+        return
+    text = [str(x) for x in process]
+    num = 0
+    input(read_info)
+    print('\n\n\n')
+    for i in text:
+        num += 1
+        print(f'     {num}:> {i}')
+        ops = input('*')
+        if ops == '/quit':
+            break
+            return
+    input(endline)
+    process.close
+
+def start(process,num):
+    while True:
+        num += 1
+        line = str(input(f'     {num}:> '))
+        if line == '/quit':
+            input(saved)
+            break
+        else:
+            process.write(line)
+            process.write('\n')
+
+def skip():
+    for i in range(50):
+        print()
+            
+    
+namesubject=('''
+    
+    [NEW FILE]________________
+    File name: ''')
+new_info=('''
+         
+    HELP: Teruslah menulis, /quit untuk keluar!
+    
+    PRESS ENTER''')
+open_namesubject=('''
+    
+    [OPEN FILE]________________
+    File name: ''')
+read_askname=('''
+    
+    [READER]________________
+    File name: ''')
+read_info=('''
+         
+    HELP: Teruslah membaca dengan menekan ENTER, 
+    ketik /quit untuk keluar!
+    
+    PRESS ENTER''')
+error=('''
+    
+    ==[ERROR]========
+    *Input wrong
+    *Try again
+    
+    PRESS ENTER!''')
+saved=('''
+    
+    ==[SAVED]========
+    *Text anda telah disimpan!
+    
+    PRESS ENTER!''')
+endline=('''
+    
+    ==[END-LINE]========
+    *Akhir text!
+    
+    PRESS ENTER!''')
+    
+while True:
+    skip()
+    menu=('''
+             
+        TEXT READER, EDITOR, AND WRITER!__________
+        Pilih menu dibawah, untuk memulai sesuatu:
+            a. NEW FILE 
+            b. EDIT 
+            c. READ 
+            e. EXIT
+            
+        >> ''')
+        
+    mulai = str.lower(input(menu))
+    if mulai == 'a':
+        createfile()
+    elif mulai == 'b':
+        openthefile()
+    elif mulai == 'c':
+        readonly()
+    elif mulai == 'e':
+        print('\n\nPROGRAMS ENDS HERE. THANK YOU!')
+        break 
+    else:
+        input(error)
