@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec  6 19:42:35 2021
+
+@author: rafi
+"""
+
+class siswa:
+
+    jumlah = 0
+
+    def __init__(self,nama,nim,tahun):
+        self.nama = str.upper(nama)
+        self.nim = str(nim)
+        self.tahun = str(tahun)
+        siswa.jumlah += 1
+
+    def biodata(self):
+        return str(f'{self.nama} ; {self.nim} ; {self.tahun}')
+
+    def JMLHDATA(self):
+        print()
+        print('Nama:',self.nama)
+        print('NIM:',self.nim)
+        print('Tahun:',self.tahun)
+        print()
+        input(f'Jumlah sekarang adalah {siswa.jumlah} orang\nPRESS ENTER')
+
+
+while True:
+    print(f'\nsiswa KE {(siswa.jumlah)+1}\nKetik exit untuk mengakhiri!')
+    a = str(input('MASUKAN Nama: '))
+    if a == 'exit':
+        break
+    b = str(input('MASUKA NIM: '))
+    c = str(input('MASUKAN ANGKATAN: '))
+    x = siswa(a,b,c)
+
+    x.JMLHDATA()
